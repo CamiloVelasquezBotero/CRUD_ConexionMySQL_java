@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 import javax.swing.JOptionPane;
 
 public class Conexion {
-    public static final String URL = "jdbc:mysql://127.0.0.1:3306/escuela?autoReconnect=true&useSSL=false";
+    public static final String URL = "jdbc:mysql://127.0.0.1:3307/escuela?autoReconnect=true&useSSL=false";
     public static final String usuario = "root";
     public static final String contraseña = "Camilo123";
     

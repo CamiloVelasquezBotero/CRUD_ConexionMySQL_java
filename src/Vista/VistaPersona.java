@@ -80,7 +80,7 @@ public class VistaPersona extends javax.swing.JFrame {
         etiquetaCorreo.setText("Correo electronico:");
 
         etiquetaNacimiento.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
-        etiquetaNacimiento.setText("Fecha Nacimiento:");
+        etiquetaNacimiento.setText("Fecha Nacimiento (yyyy-mm-dd):");
         etiquetaNacimiento.setPreferredSize(new java.awt.Dimension(149, 22));
 
         etiquetaGenero.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
@@ -108,6 +108,11 @@ public class VistaPersona extends javax.swing.JFrame {
 
         botonBuscar.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
         botonBuscar.setText("Buscar");
+        botonBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonBuscarActionPerformed(evt);
+            }
+        });
 
         botonInsertar.setFont(new java.awt.Font("Arial", 0, 17)); // NOI18N
         botonInsertar.setText("Insertar");
@@ -141,40 +146,40 @@ public class VistaPersona extends javax.swing.JFrame {
                             .addComponent(etiquetaGenero)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(listaDesplegable, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(etiquetaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(cajaFecha_Nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 244, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(panel1Layout.createSequentialGroup()
+                            .addComponent(etiquetaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(cajaFecha_Nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(panel1Layout.createSequentialGroup()
+                            .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(etiquetaNombre)
+                                .addComponent(etiquetaDomicilio)
+                                .addComponent(etiquetaCelular)
+                                .addComponent(etiquetaClave))
+                            .addGap(16, 16, 16)
                             .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(panel1Layout.createSequentialGroup()
-                                    .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(etiquetaNombre)
-                                        .addComponent(etiquetaDomicilio)
-                                        .addComponent(etiquetaCelular)
-                                        .addComponent(etiquetaClave))
-                                    .addGap(16, 16, 16)
-                                    .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(cajaCelular, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
-                                        .addComponent(cajaDomicilio)
-                                        .addComponent(cajaNombre)
-                                        .addComponent(cajaClave)))
-                                .addGroup(panel1Layout.createSequentialGroup()
-                                    .addComponent(etiquetaCorreo)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                    .addComponent(cajaCorreo))
+                                .addComponent(cajaCelular, javax.swing.GroupLayout.DEFAULT_SIZE, 303, Short.MAX_VALUE)
+                                .addComponent(cajaDomicilio)
+                                .addComponent(cajaNombre)
+                                .addComponent(cajaClave)))
+                        .addGroup(panel1Layout.createSequentialGroup()
+                            .addComponent(etiquetaCorreo)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(cajaCorreo))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
+                            .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                                    .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panel1Layout.createSequentialGroup()
-                                            .addComponent(eitquetaId)
-                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                                        .addGroup(panel1Layout.createSequentialGroup()
-                                            .addComponent(eitquetaDigitarClave)
-                                            .addGap(18, 18, 18)
-                                            .addComponent(cajaBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(20, 20, 20)))
-                                    .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                        .addComponent(botonBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
-                                        .addComponent(cajaId)))))))
-                .addContainerGap(17, Short.MAX_VALUE))
+                                    .addComponent(eitquetaId)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                                .addGroup(panel1Layout.createSequentialGroup()
+                                    .addComponent(eitquetaDigitarClave)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(cajaBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(20, 20, 20)))
+                            .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(botonBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 89, Short.MAX_VALUE)
+                                .addComponent(cajaId)))))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         panel1Layout.setVerticalGroup(
             panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -209,9 +214,11 @@ public class VistaPersona extends javax.swing.JFrame {
                     .addComponent(etiquetaCorreo)
                     .addComponent(cajaCorreo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(etiquetaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cajaFecha_Nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panel1Layout.createSequentialGroup()
+                        .addGap(1, 1, 1)
+                        .addComponent(cajaFecha_Nacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(panel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(etiquetaGenero)
@@ -230,8 +237,8 @@ public class VistaPersona extends javax.swing.JFrame {
         panelLayout.setHorizontalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelLayout.createSequentialGroup()
-                .addComponent(panel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(panel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panelLayout.setVerticalGroup(
             panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -263,6 +270,10 @@ public class VistaPersona extends javax.swing.JFrame {
     private void listaDesplegableActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_listaDesplegableActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_listaDesplegableActionPerformed
+
+    private void botonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonBuscarActionPerformed
 
     /**
      * @param args the command line arguments

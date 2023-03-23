@@ -39,7 +39,7 @@ public class ConsultasPersona extends Conexion{
             try{
                 conexion.close();   //Cerramos la conexion
             }catch(Exception ex){
-            System.err.println("Error, "+ex);
+                System.err.println("Error, "+ex);
             }
         }
     }
@@ -74,7 +74,7 @@ public class ConsultasPersona extends Conexion{
             try{
                 conexion.close();   //Cerramos la conexion
             }catch(Exception ex){
-            System.err.println("Error, "+ex);
+                System.err.println("Error, "+ex);
             }
         }
     }
@@ -110,7 +110,7 @@ public class ConsultasPersona extends Conexion{
             try{
                 conexion.close();   //Cerramos la conexion
             }catch(Exception ex){
-            System.err.println("Error, "+ex);
+                System.err.println("Error, "+ex);
             }
         }
     }
@@ -139,7 +139,7 @@ public class ConsultasPersona extends Conexion{
             try{
                 conexion.close();   //Cerramos la conexion
             }catch(Exception ex){
-            System.err.println("Error, "+ex);
+                System.err.println("Error, "+ex);
             }
         }
     }
