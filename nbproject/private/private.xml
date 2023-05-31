@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/C:/Users/camil/Documents/Repositorios%20GitHub/ProyectosJAVAMySQL/CRUD_ConModeloVistaControladorMySQL/src/crud_mvc/CRUD_MVC.java</file>
-            <file>file:/C:/Users/camil/Documents/Repositorios%20GitHub/ProyectosJAVAMySQL/CRUD_ConModeloVistaControladorMySQL/src/Controlador/ControladorPersona.java</file>
-            <file>file:/C:/Users/camil/Documents/Repositorios%20GitHub/ProyectosJAVAMySQL/CRUD_ConModeloVistaControladorMySQL/src/Vista/VistaPersona.java</file>
-            <file>file:/C:/Users/camil/Documents/Repositorios%20GitHub/ProyectosJAVAMySQL/CRUD_ConModeloVistaControladorMySQL/src/Modelo/Persona.java</file>
-            <file>file:/C:/Users/camil/Documents/Repositorios%20GitHub/ProyectosJAVAMySQL/CRUD_ConModeloVistaControladorMySQL/src/Modelo/ConsultasPersona.java</file>
-            <file>file:/C:/Users/camil/Documents/Repositorios%20GitHub/ProyectosJAVAMySQL/CRUD_ConModeloVistaControladorMySQL/src/Modelo/Conexion.java</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
